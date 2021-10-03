@@ -1,0 +1,63 @@
+<head>
+    <link href="explore.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="wd-row">
+    <input id="wd-search-twitter" type="search" placeholder="Search Twitter" />
+    <button class="wd-gear" onclick="location.href='./explore-settings.html';">&#9881;</button>
+</div>
+
+<div class="wd-flex wd-space">
+    <words class="wd-level-words">For you</words>
+    <words>Trending</words>
+    <words>COVID-19</words>
+    <words>News</words>
+    <words>Sports</words>
+    <words>Entertainment</words>
+</div>
+
+
+<div class="wd-flex-column wd-border-top">
+    <div class="wd-post">
+        <div class="wd-topic">Trending in Science</div>
+        <div class="wd-title">Starship</div>
+        <div class="wd-tweet">55.5k Tweets</div>
+    </div>
+    <div class="wd-post">
+        <div class="wd-topic">Sports - Trending</div>
+        <div class="wd-title">Joe Rogan</div>
+        <div class="wd-tweet">6.21B Tweets</div>
+    </div>
+    <div class="wd-post wd-post-image">
+        <div class="wd-author">New York Times <span class="wd-time">- Yesterday</span></div>
+        <div class="wd-title">Inside United Airlines Decision to Mandate Coronavirus Vaccines</div>
+        <img class="wd-image" src="https://static01.nyt.com/images/2021/10/03/business/03united-print1/merlin_195657555_79585fce-92ec-4bc6-98b7-8bfb8ef142f8-superJumbo.jpg?quality=90&auto=webp"/>
+    </div>
+    <div class="wd-post wd-post-image">
+        <div class="wd-topic">COVID-19 <span class="wd-time">- LIVE</span></div>
+        <div class="wd-title">COVID-19: News and updates for Washington</div>
+        <img class="wd-image" src="https://www.doh.wa.gov/portals/1/images/1600/COVID-19/vaccine-thumbnail.jpg"/>
+    </div>
+    <div class="wd-post wd-post-image">
+        <div class="wd-author">New York Times <span class="wd-time">- Yesterday</span></div>
+        <div class="wd-title">Biden Throws In With Left, Leaving His Agenda in Doubt</div>
+        <img class="wd-image" src="https://static01.nyt.com/images/2021/10/02/us/politics/02dem-divide1/02dem-divide1-superJumbo-v4.jpg?quality=90&auto=webp"/>
+    </div>
+    <div class="wd-post wd-post-image">
+        <div class="wd-topic">Dota2 <span class="wd-time">- Ti</span></div>
+        <div class="wd-title">5 days before Ti</div>
+        <img class="wd-image" src="data:image/jpeg;base64,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"/>
+    </div>
+    <div class="wd-post wd-post-image">
+        <div class="wd-topic">NBA Basketball <span class="wd-time">- News</span></div>
+        <div class="wd-title">James Borrego: LaMelo Ball must take 'next step' for Hornets to win</div>
+        <img class="wd-image" src="https://cdn.nba.com/manage/2021/10/lamelo-driving-iso.jpg"/>
+    </div>
+
+</div>
+</body>>
+
+
+
+

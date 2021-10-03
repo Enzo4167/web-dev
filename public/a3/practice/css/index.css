@@ -1,0 +1,38 @@
+.bg-color-yellow
+{ background-color: #ffff07; }
+.bg-color-blue
+{ background-color: #7070ff; }
+.bg-color-red
+{ background-color: #ff7070; }
+.bg-color-green
+{ background-color: green; }
+
+
+.border-fat
+{ border-width: 20px 30px 20px 30px; }
+.border-thin { border-width: 4px; }
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-yellow { border-color: #ffff07; }
+.border-red { border-color: #ff7070; }
+.border-blue { border-color: #7070ff; }
+
+.dimension-portrait {
+    width: 75px;
+    height: 100px;
+}
+.dimension-landscape {
+      width: 100px;
+      height: 75px;
+  }
+.dimension-square {
+        width: 75px;
+        height: 75px;
+    }
+
+At the top there's an input field with rounded
+corners and a placeholder that reads "Search
+Twitter". The color of the text is white and the
+background color is dark gray. 12px from the
+                                 right border there's a link in the form of a gear
+that references "explore-settings.html

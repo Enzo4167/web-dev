@@ -1,0 +1,153 @@
+.fg-color-black { color: black; }
+.fg-color-white { color: white; }
+.fg-color-blue { color: #7070ff; }
+.fg-color-red { color: #ff7070; }
+.fg-color-light-gray { color: #d3d3d3; }
+.fg-color-green { color: green; }
+.fg-color-b1 {  color: rgb(29,161,242);}
+.fg-color-b2 { color: rgb(110, 118, 125);}
+.fg-color-b3 { color: rgb(110,118,125);}
+
+.body
+{
+    background:#000000 ;
+    margin-right:200px;
+    border-color: rgb(47,51,54);
+    margin-left: 16px;
+}
+
+
+.bg-color-black
+{ background-color: #000000; }
+.bg-color-dark-gray
+{ background-color: #a9a9a9; }
+.bg-color-yellow
+{ background-color: #ffff07; }
+.bg-color-blue
+{ background-color: #7070ff; }
+.bg-color-red
+{ background-color: #ff7070; }
+.bg-color-green
+{ background-color: green; }
+
+.dimension-portrait {
+    width: 100px;
+    height: 20px;
+}
+.dimension-landscape {
+      width: 100px;
+      height: 75px;
+  }
+.dimension-square {
+        width: 75px;
+        height: 75px;
+    }
+
+.fontSize {
+    font-size: 15px;
+}
+
+.fontSizeS {
+    font-size: 13px;
+}
+
+
+
+.padded-top-left {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.padded-bottom-right {
+      padding-bottom: 50px;
+    padding-right: 50px;
+}
+.padded-right {
+    padding-right: 50px;
+}
+.padding-fat {
+      padding: 50px;
+  }
+.padding-bottom {
+    padding-bottom: 10px;
+}
+
+
+.padding-around{
+    padding: 16px;
+}
+
+.rounded-corners-all-around {
+    border-radius: 50px;
+}
+
+.pos-relative-nudge-down-right {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.rounded-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.rounded-corners-bottom {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.rounded-corners-all-around {
+    border-radius: 50px;
+}
+.rounded-corners-inline {
+    border-radius: 30px 0px 20px 50px;
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+      float: right;
+      height: 100px;
+      width: 100px;
+    border-radius:15px;
+}
+.float-done {
+        clear: both;
+    }
+/*The color of the text is white and the
+  background color is dark gray. 12px from the
+                                   right border there's a link in the form of a gear
+that references "explore-settings.html
+
+
+ */
+.border-fat { border-width: 20px 30px 20px 30px; }
+.border-thin { border-width: 4px; }
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-yellow { border-color: #ffff07; }
+.border-red { border-color: #ff7070; }
+.border-blue { border-color: #7070ff; }
+.border-default { border-color: rgb(47,51,54); }
+.border-bottom {
+    border-bottom: 20px;
+    color: rgb(29,161,242);
+}
+.pos-absolute-right {
+    position: absolute;
+    right: 16px;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+.margin-right-left {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+.margin-all-around {
+          margin: 30px;
+      }
+
+.span {
+    content: "\2699";
+}
