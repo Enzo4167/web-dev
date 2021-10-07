@@ -1,0 +1,30 @@
+.img {
+    width:80%;
+    z-index: 0;  }
+
+.text-over-image {
+    z-index:1;
+    font-size: 1.8em;
+    margin-top: -50px;
+    margin-left: 10px;
+}
+
+.absolute {
+    position: relative; /* Helps us control overlap */
+    margin-left: 25px; /* Creates space for the Phone Icon */
+    margin-top: -15px;
+}
+
+.absolute2 {
+    position: relative; /* Helps us control overlap */
+    margin-left: 15px; /* Creates space for the Phone Icon */
+    margin-top: -28px;
+}
+body{
+
+    background-color: #000000;
+}
+
+.invert{
+    filter: invert(1);
+}
