@@ -3,8 +3,8 @@ const PostSummaryItem = (post) => {
     <li class="list-group-item">
       <div class="row mt-2">
         <div class="col-10">
-          <div class="wd-suggestion">${post.topic}</div>
-          <div class="wd-author-title">${post.userName} <i class="fas fa-check-circle"></i> <span class="wd-time-passed">- ${post.time}</span></div>
+          <div class="wd-gray">${post.topic}</div>
+          <div class="wd-author-title">${post.userName} <i class="fas fa-check-circle"></i> <span class="wd-time">- ${post.time}</span></div>
           <div class="wd-author-title">
             ${post.title}
           </div>

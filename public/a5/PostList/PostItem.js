@@ -9,26 +9,26 @@ const PostItem = (post) => {
       <div class="col-11">
         <div class="wd-padding-left">
           ${post.userName} <i class="fas fa-check-circle"></i> 
-          <span class="wd-color-lightgray">${post.handle} - ${post.time}</span>        
+          <span class="wd-lightgray">${post.handle} - ${post.time}</span>        
         </div>
         
-        <i class="fas fa-ellipsis-h wd-right-align wd-color-lightgray"></i>
+        <i class="fas fa-ellipsis-h wd-right-align wd-lightgray"></i>
         <div class="wd-main-content mb-2 wd-padding-left">
           ${post.content}
         </div>
         <img src="${post.image}" class="wd-rounded-corners-pic">
-        <div class="row wd-color-lightgray mt-2">
+        <div class="row wd-lightgray mt-2">
           <div class="col-3">
-            <i class='far fa-comment wd-icon-padding-right'></i> ${post.comment}
+            <i class='far fa-comment wd-icon-padding'></i> ${post.comment}
           </div>
           <div class="col-3">
-            <i class='fas fa-retweet wd-icon-padding-right'></i> ${post.retweet}
+            <i class='fas fa-retweet wd-icon-padding'></i> ${post.retweet}
           </div>
           <div class="col-3">
-            <i class='far fa-heart wd-icon-padding-right'></i> ${post.like}
+            <i class='far fa-heart wd-icon-padding'></i> ${post.like}
           </div>
           <div class="col-3">
-            <i class='fas fa-arrow-up wd-icon-padding-right'></i> ${post.share}
+            <i class='fas fa-arrow-up wd-icon-padding'></i> ${post.share}
           </div>
         </div>
 
@@ -46,9 +46,9 @@ const PostItem = (post) => {
       <div class="col-11">
         <div class="wd-padding-left">
           ${post.userName} <i class="fas fa-check-circle"></i>
-          <span class="wd-color-lightgray">${post.handle} - ${post.time}</span>        
+          <span class="wd-lightgray">${post.handle} - ${post.time}</span>        
         </div>
-        <i class="fas fa-ellipsis-h wd-right-align wd-color-lightgray"></i>
+        <i class="fas fa-ellipsis-h wd-right-align wd-lightgray"></i>
         <div class="wd-main-content mb-2 wd-padding-left">
           ${post.content}
         </div>
@@ -59,25 +59,25 @@ const PostItem = (post) => {
             <p class="wd-post-text-color">
               ${post.link.title}
             </p>
-            <div class="wd-color-lightgray">
+            <div class="wd-lightgray">
               ${post.link.text}
             </div>  
-            <div class="wd-color-lightgray">
+            <div class="wd-lightgray">
               <i class="fa fa-link"></i> ${post.link.link}
             </div>  
         </div>
-        <div class="row wd-color-lightgray mt-2">
+        <div class="row wd-lightgray mt-2">
           <div class="col-3">
-            <i class='far fa-comment wd-icon-padding-right'></i> ${post.comment}
+            <i class='far fa-comment wd-icon-padding'></i> ${post.comment}
           </div>
           <div class="col-3">
-            <i class='fas fa-retweet wd-icon-padding-right'></i> ${post.retweet}
+            <i class='fas fa-retweet wd-icon-padding'></i> ${post.retweet}
           </div>
           <div class="col-3">
-            <i class='far fa-heart wd-icon-padding-right'></i> ${post.like}
+            <i class='far fa-heart wd-icon-padding'></i> ${post.like}
           </div>
           <div class="col-3">
-            <i class='fas fa-arrow-up wd-icon-padding-right'></i> ${post.share}
+            <i class='fas fa-arrow-up wd-icon-padding'></i> ${post.share}
           </div>
         </div>
 
