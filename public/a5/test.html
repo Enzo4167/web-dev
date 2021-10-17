@@ -1,3 +1,62 @@
-<script>
-    alert("Hello World!");
-</script>
+<body>
+    <h1 id="hello">Javascript</h1>
+    <script>
+    document.write(`
+        <h1>Hello World!</h1>
+        <ul>
+            <li>Pick up the kids</li>
+            <li>Buy milk!!!</li>
+        </ul>
+
+    `);
+    var total = 0;
+    var h1_hello = document.getElementById('hello');
+    h1_hello.innerText = ('Hello Word!');
+    h1_hello.style.color = "red";
+
+    var today = new Date();
+    document.write("<h2>The Month</h2>");
+    document.write(today.getMonth());
+    var scores = [90, 89, 78, 67];
+    document.write("<ul>");
+    for(var i in scores) {
+        document.write("<li>scores["+i+"] = " +
+            scores[i]);
+        document.write("</li>");
+    }
+    document.write("</ul>")
+
+
+
+    document.write("<ul>");
+    for(var i in scores){
+        document.write("<li>scores["+i+"] = " + scores[i]);
+        document.write("</ul>");
+    }
+    document.write(`
+    <ul>
+        ${
+        scores.map((score, idx) => `
+            <li>
+                scores[${idx}] = ${score}
+            </li>
+                `).join('')
+    }
+    </ul>
+    `);
+
+    document.write(`
+        <table border="1">
+            ${
+                scores.map((score, idx) => `
+                    <tr>
+                        <td>scores[${idx}]</td>
+                        <td>${score}</td>
+                    </tr>
+                `)
+            }
+        </table>
+    `)
+
+    </script>
+</body>
