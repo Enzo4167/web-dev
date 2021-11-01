@@ -2,7 +2,7 @@
     {
         "avatarIcon": "https://pbs.twimg.com/profile_images/1442634650703237120/mXIcYtIs_400x400.jpg",
         "userName": "Elon Musk",
-        "handle": "@elonmusk",
+        "handle": " @elonmusk",
         "time": "23h",
         "content": "Amazing show about @Inspiration4x mission!",
         "image": "https://pbs.twimg.com/card_img/1446647628930838528/QEKvxTDO?format=jpg&name=900x900",
@@ -18,18 +18,17 @@
         }
     },
     {
-
         "avatarIcon": "https://pbs.twimg.com/profile_images/966372680306868224/60wfGe9e_400x400.jpg",
         "userName": "New York Post",
-        "handle": "@nypost",
+        "handle": " @nypost",
         "time": "23h",
-        "content": "Grimes seen reading Karl Marx following split with world's richest man Elon Musk <a href=\"//trib.al/nx2Gfaq\">trib.al/nx2Gfaq</a>}",
+        "content": "Grimes seen reading Karl Marx following split with world's richest man Elon Musk",
         "image": "https://pbs.twimg.com/media/FAuW2GlXIAIOBN7?format=jpg&name=900x900",
         "link": {
         },
         "comment": "965",
         "retweet": "2.4K",
-        "like": "4L",
+        "like": "4K",
         "share": ""
     }
 ]

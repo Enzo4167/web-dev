@@ -1,6 +1,6 @@
 import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/bootstrap/bootstrap.min.css';
-import './vendors/font-awesome/css/font-awesome.min.css';
+import './vendors/Font-Awesome-master/Font-Awesome-master/css/all.min.css';
 
 import HelloWorld from "./components/a6/HelloWorld";
 import Practice from "./components/a6/Practice";

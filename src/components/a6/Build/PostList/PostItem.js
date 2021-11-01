@@ -15,8 +15,8 @@ const PostItem = (
             share: '',
             link: {
                 image: '../images/inspiration4.jpeg',
-                title: 'Coundown: Inspiration4 Mission to Space | Netflix Official Site',
-                text: 'From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space...',
+                title: 'Countdown: Inspiration4 Mission to Space | Netflix Official Site',
+                text: 'From training to launch to landing, this all-access rides along with the Inspiration4 crew on the first all-civilian orbital space...',
                 link: 'netflix.com'
             }
         }
