@@ -1,16 +1,15 @@
-import React from "react";
-import NavigationSidebar from "./NavigationSidebar";
-import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
+import React from "react"
+import {Route} from "react-router-dom";
+import HomeScreen from "./HomeScreen";
+import ExploreScreen from "./ExploreScreen";
 const Build = () => {
-    return(
-        <>
-            <NavigationSidebar active="home"/>
-            <WhoToFollowListItem who={{
-                avatarIcon: '../../../images/virgin.png',
-                userName: 'Virgin Galactic',
-                handle: 'virgingalactic',
-            }}/>
-        </>
+    return (
+        <div>
+            <Route path={["/a6/twitter/home"]}
+                   exact={true} component={HomeScreen}/>
+            <Route path={"/a6/twitter/explore"}
+                   exact={true} component={ExploreScreen}/>
+        </div>
     )
 };
 export default Build;
