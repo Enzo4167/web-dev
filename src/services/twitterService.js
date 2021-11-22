@@ -1,4 +1,4 @@
-const TWEET_API = 'https://lit-ridge-22629.herokuapp.com/api/tweets';
+const TWEET_API = 'https://node-enzo.herokuapp.com/api/tweets';
 
 export const fetchAllTweets = (dispatch) => {
     // console.log('fetching tweets...')

@@ -1,27 +1,30 @@
 import React from "react";
 import "../HomeScreen/home.css"
-const PostItem = (
-    {
-        post = {
-            avatarIcon: '../images/elon.jpeg',
-            userName: 'Elon Musk',
-            handle: '@elonmusk',
-            time: '23h',
-            content: 'Amazing show about @Inspiration4x mission!',
-            image: '../images/inspiration4.jpeg',
-            comment: '4.2K',
-            retweet: '3.5K',
-            like: '37.5K',
-            share: '',
-            link: {
-                image: '../images/inspiration4.jpeg',
-                title: 'Countdown: Inspiration4 Mission to Space | Netflix Official Site',
-                text: 'From training to launch to landing, this all-access rides along with the Inspiration4 crew on the first all-civilian orbital space...',
-                link: 'netflix.com'
+import {useDispatch} from "react-redux";
+import {deleteTweet, likeTweet} from "../../../../services/twitterService";
+const PostItem = ({post}) => {
+    const dispatch = useDispatch();
+    const deleteTweetClickHandler = () => {
+        // console.log(post._id);
+        // dispatch({type: 'delete-tweet', post})
+        deleteTweet(dispatch, post);
+    };
+    const likeClickHandler = () => {
+        // dispatch({type: 'like-tweet', post});
+        likeTweet(dispatch, post);
+    }
+
+
+    function isEmpty(post) {
+        for (let key in post) {
+            if (post.hasOwnProperty(key)) {
+                return false;
             }
         }
-    }) => {
-    if (Object.keys(post.link).length === 0) {
+        return true;
+    }
+
+    if (isEmpty(post.link)) {
         return (
             <>
                 <div className="list-group-item wd-background-black">
@@ -33,7 +36,10 @@ const PostItem = (
                             <div className="wd-padding-left">
                                 {post.userName} <i className="fas fa-check-circle"></i>
                                 <span
-                                    className="wd-color-lightgray">{post.handle} - {post.time}</span>
+                                    className="wd-color-lightgray">{post.handle} - {post.time}
+                  </span>
+                                <i onClick={deleteTweetClickHandler}
+                                   className="fas fa-times fa-pull-right"></i>
                             </div>
 
                             <i className="fas fa-ellipsis-h wd-right-align wd-color-lightgray"></i>
@@ -48,9 +54,18 @@ const PostItem = (
                                 <div className="col-3">
                                     <i className='fas fa-retweet wd-icon-padding-right'></i> {post.retweet}
                                 </div>
-                                <div className="col-3">
-                                    <i className='far fa-heart wd-icon-padding-right'></i> {post.like}
+                                <div className="col-3"
+                                     onClick={likeClickHandler}>
+                                    {
+                                        post.liked && <i className="fas fa-heart me-2"
+                                                         style={{color: post.liked ? "red": "white"}}></i>
+                                    }
+                                    {
+                                        !post.liked && <i className="far fa-heart me-2"></i>
+                                    }
+                                    {post.like}
                                 </div>
+
                                 <div className="col-3">
                                     <i className='fas fa-arrow-up wd-icon-padding-right'></i> {post.share}
                                 </div>
@@ -71,6 +86,8 @@ const PostItem = (
                     <div class="wd-padding-left">
                         {post.userName} <i class="fas fa-check-circle"></i>
                         <span class="wd-color-lightgray">{post.handle} - {post.time}</span>
+                        <i onClick={deleteTweetClickHandler}
+                           className="fas fa-times fa-pull-right"></i>
                     </div>
                     <i class="fas fa-ellipsis-h wd-right-align wd-color-lightgray"></i>
                     <div class="wd-main-content mb-2 wd-padding-left">
@@ -97,8 +114,16 @@ const PostItem = (
                         <div class="col-3">
                             <i class='fas fa-retweet wd-icon-padding-right'></i> {post.retweet}
                         </div>
-                        <div class="col-3">
-                            <i class='far fa-heart wd-icon-padding-right'></i> {post.like}
+                        <div className="col-3"
+                             onClick={likeClickHandler}>
+                            {
+                                post.liked && <i className="fas fa-heart me-2"
+                                                 style={{color: post.liked ? "red": "white"}}></i>
+                            }
+                            {
+                                !post.liked && <i className="far fa-heart me-2"></i>
+                            }
+                            {post.like}
                         </div>
                         <div class="col-3">
                             <i class='fas fa-arrow-up wd-icon-padding-right'></i> {post.share}

@@ -1,4 +1,4 @@
-const PROFILE_API = 'https://lit-ridge-22629.herokuapp.com/api/profile';
+const PROFILE_API = 'https://node-enzo.herokuapp.com/api/profile';
 
 export const fetchAllProfiles = (dispatch) => {
     // console.log('fetching profiles...');

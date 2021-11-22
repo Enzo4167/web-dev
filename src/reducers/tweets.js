@@ -8,22 +8,6 @@ const tweets = (state = posts, action) => {
             );
             break;
         case 'create-tweet':
-            // console.log('entering create-tweet', action.tweet)
-            // const tweet = {
-            //     _id: (new Date()).getTime() + '',
-            //     avatarIcon: "/images/elon.jpeg",
-            //     userName: "Elon Musk",
-            //     handle: "@elonmusk",
-            //     time: "3h",
-            //     content: action.content,
-            //     image: "/images/cybertruck.png",
-            //     comment: "77.4K",
-            //     retweet: "40.7K",
-            //     like: 5432,
-            //     share: "12k",
-            //     link: {}
-            // };
-            // console.log(JSON.stringify(state.posts));
             return ([
                     action.tweet,
                     ...state,

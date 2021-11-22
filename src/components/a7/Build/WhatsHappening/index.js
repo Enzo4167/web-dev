@@ -17,7 +17,7 @@ const WhatsHappening = () => {
         <>
             <div className="row mt-2">
                 <div className="col-1">
-                    <img src="/images/elon.jpeg" alt="" className="wd-avatar"/>
+                    <img src="https://pbs.twimg.com/profile_images/1442634650703237120/mXIcYtIs_400x400.jpg" alt="" className="wd-avatar"/>
                 </div>
                 <div className="col-10">
                 <textarea value={whatsHappening}

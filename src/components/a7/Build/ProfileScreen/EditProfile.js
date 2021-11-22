@@ -1,25 +1,28 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import NavigationSidebar from "../NavigationSidebar";
 import {Link} from "react-router-dom";
-import {fetchAllProfiles, saveProfile} from "../../../../services/profileService";
-const selectProfile = (state) => state.profile;
+
 const EditProfile = () => {
-    const initProfile = useSelector(selectProfile);
+    const profile = useSelector((state) => state.profile);
+    const [profileEdited, setProfile] = useState({
+        ...profile
+    });
     const dispatch = useDispatch();
-    useEffect(() => fetchAllProfiles(dispatch), []);
-    const [profile, setProfile] = useState(initProfile);
     const saveProfileHandler = () => {
-        console.log('save profile clicked, current profile is: ', profile)
-        // const action = {type: 'save-profile', profile: profileEdited};
-        // dispatch(action);
-        saveProfile(dispatch, profile)
+        // console.log(profileEdited)
+        const action = {type: 'save-profile', profile: profileEdited};
+        dispatch(action);
     };
+    // const exitClickHandler = () => {
+    //     console.log(profileEdited)
+    //     dispatch({type: 'exit-profile', profileEdited})
+    // };
     const formChangeHandler = (event) => {
         const value = event.target.value;
         // console.log([event.target.name], value);
         setProfile({
-            ...profile,
+            ...profileEdited,
             [event.target.name]: value
         });
     }
@@ -32,7 +35,7 @@ const EditProfile = () => {
                 <div className="col-10">
                     <div className="row mt-2">
                         <div className="col-5">
-                            <Link to="/a8/twitter/profile"><i
+                            <Link to="/a7/twitter/profile"><i
                                 className="fas fa-times fa-2x fa-pull-left edit-profile-margin-right"></i></Link>
                             <h4>Edit Profile</h4>
                         </div>
@@ -61,27 +64,27 @@ const EditProfile = () => {
                             <li className="list-group-item">
                                 First Name
                                 <br/>
-                                <input name="firstName" onChange={formChangeHandler} value={profile.firstName} className="form-control edit-profile-form"/>
+                                <input name="firstName" onChange={formChangeHandler} value={profileEdited.firstName} className="form-control edit-profile-form"/>
                             </li>
                             <li className="list-group-item">
                                 Last Name
                                 <br/>
-                                <input name="lastName" onChange={formChangeHandler} value={profile.lastName} className="form-control edit-profile-form"/>
+                                <input name="lastName" onChange={formChangeHandler} value={profileEdited.lastName} className="form-control edit-profile-form"/>
                             </li>
                             <li className="list-group-item">
                                 Bio
                                 <br/>
-                                <input name="bio" onChange={formChangeHandler} value={profile.bio} className="form-control edit-profile-form"/>
+                                <input name="bio" onChange={formChangeHandler} value={profileEdited.bio} className="form-control edit-profile-form"/>
                             </li>
                             <li className="list-group-item">
                                 Location
                                 <br/>
-                                <input name="location" onChange={formChangeHandler} value={profile.location} className="form-control edit-profile-form"/>
+                                <input name="location" onChange={formChangeHandler} value={profileEdited.location} className="form-control edit-profile-form"/>
                             </li>
                             <li className="list-group-item">
                                 Website
                                 <br/>
-                                <input name="website" onChange={formChangeHandler} value={profile.website} className="form-control edit-profile-form"/>
+                                <input name="website" onChange={formChangeHandler} value={profileEdited.website} className="form-control edit-profile-form"/>
                             </li>
                         </ul>
                     </div>
