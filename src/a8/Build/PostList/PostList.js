@@ -7,7 +7,7 @@ const selectAllTweets = (state) => state.posts;
 const PostList = () => {
     const tweets = useSelector(selectAllTweets);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllTweets(dispatch), []);
+    useEffect(() => fetchAllTweets(dispatch));
     // console.log(JSON.stringify(tweets))
     return (
         tweets.map(post => {

@@ -8,12 +8,10 @@ const profile = (state = profilesData, action) => {
             return (
                 action.profiles
             )
-            break;
         case 'save-profile':
             return (
                 action.profile
             )
-            break;
         case 'exit-profile':
             break;
         default:

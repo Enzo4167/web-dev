@@ -6,20 +6,17 @@ const tweets = (state = posts, action) => {
             return(
                 action.tweets
             );
-            break;
         case 'create-tweet':
             return ([
                     action.tweet,
                     ...state,
                 ]
             );
-            break;
         case 'delete-tweet':
             console.log('entering delete-tweet',JSON.stringify(state));
             return (
                 state.filter(post => post._id !== action.tweet._id)
             )
-            break;
         case 'like-tweet':
             // console.log('entering like-tweet',JSON.stringify(state));
             return (
@@ -39,7 +36,6 @@ const tweets = (state = posts, action) => {
                     }
                 })
             );
-            break;
         default:
             return (state);
     }
