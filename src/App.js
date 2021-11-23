@@ -7,6 +7,8 @@ import {BrowserRouter, Link, Route} from "react-router-dom";
 import A6Build from "./components/a6";
 import A7Build from "./components/a7";
 import A8Build from "./a8/Build";
+import A9Build from "./a9/Build";
+import A9 from "./a9";
 import A8 from "./a8";
 import A7 from "./components/a7"
 import A6 from "./components/a6"
@@ -17,6 +19,7 @@ function App() {
                 <Link to="/a6/practice">A6 </Link>
                 <Link to="/a7/practice">A7 </Link>
                 <Link to="/a8/practice">A8 </Link>
+                <Link to="/a9/practice">A9 </Link>
 
                 <Route path="/a6/practice">
                     <A6/>
@@ -26,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/a8/practice">
                     <A8/>
+                </Route>
+                <Route path="/a9/practice">
+                    <A9/>
                 </Route>
 
                 <Route path="/a6/twitter">
@@ -37,7 +43,9 @@ function App() {
                 <Route path="/a8/twitter">
                     <A8Build/>
                 </Route>
-
+                <Route path="/a9/twitter">
+                    <A9Build/>
+                </Route>
             </div>
         </BrowserRouter>
 
