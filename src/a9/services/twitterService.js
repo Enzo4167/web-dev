@@ -1,8 +1,8 @@
-const TWEET_API = 'https://node-enzo.herokuapp.com/api/tweets';
-//const TWEET_API = 'http://localhost:4000/api/tweets';
+// const TWEET_API = 'https://node-enzo.herokuapp.com/api/tweets';
+const TWEET_API = 'http://localhost:4000/api/tweets';
 
 export const fetchAllTweets = (dispatch) => {
-    // console.log('fetching tweets...')
+    console.log('A9 fetching tweets...')
     fetch(TWEET_API)
         .then(response => response.json())
         .then(tweets =>
@@ -42,13 +42,27 @@ export const deleteTweet = (dispatch, tweet) => {
 }
 
 export const likeTweet = (dispatch, tweet) => {
-    fetch(`${TWEET_API}/${tweet._id}/like`, {
-        method: 'PUT'
+    console.log(tweet._id);
+    const toggleLike = tweet.liked === true ? false : true;
+    const newTweet = {...tweet, liked: toggleLike}
+    // console.log(newTweet);
+    fetch(`${TWEET_API}/${newTweet._id}/like`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(newTweet)
     })
         .then(response => dispatch({
                 type: 'like-tweet',
-                tweet
+                newTweet
             })
         )
-}
+};
 
+export default {
+    fetchAllTweets,
+    postNewTweet,
+    deleteTweet,
+    likeTweet
+}

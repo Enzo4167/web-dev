@@ -1,5 +1,5 @@
-const PROFILE_API = "https://node-enzo.herokuapp.com/api/profile";
-
+//const PROFILE_API = "https://node-enzo.herokuapp.com/api/profile";
+const PROFILE_API = 'http://localhost:4000/api/profile';
 export const fetchAllProfiles = (dispatch) => {
     // console.log('fetching profiles...');
     fetch(PROFILE_API)
@@ -30,4 +30,10 @@ export const saveProfile = (dispatch, profile) => {
                 profile
             })
         )
+}
+
+export default {
+    fetchAllProfiles,
+    saveProfile,
+    findProfileById
 }

@@ -1,7 +1,7 @@
 import PostItem from "./PostItem.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import service from "../../../services/twitterService";
+import service from "../../services/twitterService";
 
 const selectAllTweets = (state) => state.posts;
 const PostList = () => {
@@ -11,7 +11,7 @@ const PostList = () => {
     useEffect(() => {
         service.fetchAllTweets(dispatch);
         console.log('tweets: ', tweets)
-    }, []);
+    });
     // console.log(JSON.stringify(tweets))
     return (
         tweets.map(post => {
