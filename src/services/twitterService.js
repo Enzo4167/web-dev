@@ -1,4 +1,5 @@
-const TWEET_API = 'https://node-enzo.herokuapp.com/api/tweets';
+const TWEET_API = 'https://node-enzo.herokuapp.com/api/who';
+//const TWEET_API = 'http://localhost:4000/api/tweets';
 
 export const fetchAllTweets = (dispatch) => {
     // console.log('fetching tweets...')
@@ -49,4 +50,12 @@ export const likeTweet = (dispatch, tweet) => {
                 tweet
             })
         )
+}
+
+
+export default {
+    fetchAllTweets,
+    postNewTweet,
+    deleteTweet,
+    likeTweet
 }

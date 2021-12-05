@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import NavigationSidebar from "../NavigationSidebar";
+import NavigationSidebar from "../NavigationSidebar/";
 import "./ProfileScreen.css"
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
@@ -9,7 +9,7 @@ const selectProfile = (state) => state.profile;
 const ProfileScreen = () => {
     const profile = useSelector(selectProfile);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllProfiles(dispatch));
+    useEffect(() => fetchAllProfiles(dispatch), []);
     // console.log(profile);
     // let editProfile = false;
     const editProfileClickHandler = () => {
@@ -35,11 +35,9 @@ const ProfileScreen = () => {
                     <div className="row mt-2">
                         <div className="profile-firstname-lastname">
                             {profile.firstName} {profile.lastName}
-                            <Link id="edit-profile" to="/a8/twitter/edit-profile"><button onClick={editProfileClickHandler} className="btn rounded-pill profile-edit-button">Edit Profile</button></Link>
+                            <Link id="edit-profile" to="/a9/twitter/edit-profile"><button onClick={editProfileClickHandler} className="btn rounded-pill profile-edit-button">Edit Profile</button></Link>
                         </div>
-                        <div className="bio">
-                            {profile.bio}
-                        </div>
+
                     </div>
                     <div className="profile-handle">@{profile.handle}</div>
                 </div>

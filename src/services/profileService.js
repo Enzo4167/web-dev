@@ -12,6 +12,11 @@ export const fetchAllProfiles = (dispatch) => {
         )
 }
 
+export const findProfileById = (profile) => {
+    fetch(`${PROFILE_API}/${profile._id}`)
+        .then(response => response.json())
+}
+
 export const saveProfile = (dispatch, profile) => {
     fetch(PROFILE_API, {
         method: 'PUT',
@@ -25,4 +30,10 @@ export const saveProfile = (dispatch, profile) => {
                 profile
             })
         )
+}
+
+export default {
+    fetchAllProfiles,
+    saveProfile,
+    findProfileById
 }

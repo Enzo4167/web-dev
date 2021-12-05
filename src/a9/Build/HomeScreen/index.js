@@ -1,6 +1,6 @@
 import React from "react";
-import NavigationSidebar from "../NavigationSidebar";
-import PostSummaryList from "../PostSummaryList";
+import NavigationSidebar from "../NavigationSidebar/";
+import PostSummaryList from "../PostSummaryList/";
 import PostList from "../PostList/PostList.js";
 import {Link} from "react-router-dom";
 import "./home.css"

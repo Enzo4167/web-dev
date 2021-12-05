@@ -1,5 +1,5 @@
 import React from "react";
-import PostSummaryList from "../PostSummaryList";
+import PostSummaryList from "../PostSummaryList/";
 import {Link} from "react-router-dom";
 const ExploreComponent = () => {
     return (
@@ -38,7 +38,7 @@ const ExploreComponent = () => {
             </ul>
             <div className="list-group">
                 <div className="list-group-item">
-                    <img src="https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg" alt="..."
+                    <img src="/images/starship.jpeg" alt="..."
                          className="wd-full-width-height"/>
                     <h5 className="card-title">SpaceX's StarShip</h5>
                 </div>

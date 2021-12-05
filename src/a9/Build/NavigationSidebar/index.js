@@ -8,10 +8,10 @@ const NavigationSidebar = (
     return (
         <>
             <div className="list-group">
-                <Link to="/a8/"><i className="fab fa-twitter fa-2x"></i></Link>
-                <Link to="/a8/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}><i
+                <Link to="/a9/"><i className="fab fa-twitter fa-2x"></i></Link>
+                <Link to="/a9/twitter/home" className={`list-group-item ${active === 'home' ? 'active' : ''}`}><i
                     className="fa fa-home"></i> Home</Link>
-                <Link to="/a8/twitter/explore"
+                <Link to="/a9/twitter/explore"
                       className={`list-group-item ${active === 'explore' ? 'active' : ''}`}><i
                     className="fa fa-hashtag"></i> Explore</Link>
                 <Link id="notificaton" to="#" className="list-group-item"><i
@@ -22,7 +22,7 @@ const NavigationSidebar = (
                     className="fa fa-bookmark"></i> Bookmarks</Link>
                 <Link id="lists" to="#" className="list-group-item"><i
                     className="fa fa-list"></i> Lists</Link>
-                <Link id="profile" to="/a8/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' : ''}`}><i
+                <Link id="profile" to="/a9/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' : ''}`}><i
                     className="fa fa-user"></i> Profile</Link>
 
 

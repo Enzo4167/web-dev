@@ -7,12 +7,9 @@ const selectProfile = (state) => state.profile;
 const EditProfile = () => {
     const initProfile = useSelector(selectProfile);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllProfiles(dispatch));
+    useEffect(() => fetchAllProfiles(dispatch), []);
     const [profile, setProfile] = useState(initProfile);
     const saveProfileHandler = () => {
-        console.log('save profile clicked, current profile is: ', profile)
-        // const action = {type: 'save-profile', profile: profileEdited};
-        // dispatch(action);
         saveProfile(dispatch, profile)
     };
     const formChangeHandler = (event) => {
@@ -32,7 +29,7 @@ const EditProfile = () => {
                 <div className="col-10">
                     <div className="row mt-2">
                         <div className="col-5">
-                            <Link to="/a8/twitter/profile"><i
+                            <Link to="/a9/twitter/profile"><i
                                 className="fas fa-times fa-2x fa-pull-left edit-profile-margin-right"></i></Link>
                             <h4>Edit Profile</h4>
                         </div>
