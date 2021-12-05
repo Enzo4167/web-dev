@@ -7,7 +7,7 @@ const selectProfile = (state) => state.profile;
 const EditProfile = () => {
     const initProfile = useSelector(selectProfile);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllProfiles(dispatch), []);
+    useEffect(() => fetchAllProfiles(dispatch));
     const [profile, setProfile] = useState(initProfile);
     const saveProfileHandler = () => {
         saveProfile(dispatch, profile)

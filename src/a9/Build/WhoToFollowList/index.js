@@ -7,7 +7,7 @@ const WhoToFollowList = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         service.fetchAllWho(dispatch);
-    }, [])
+    })
 
     // console.log('who from who to follow list: ', who);
     return (

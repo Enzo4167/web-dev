@@ -10,7 +10,3 @@ export const fetchAllWho = (dispatch) => {
             })
         )
 }
-
-export default {
-    fetchAllWho
-}

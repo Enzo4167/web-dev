@@ -31,9 +31,3 @@ export const saveProfile = (dispatch, profile) => {
             })
         )
 }
-
-export default {
-    fetchAllProfiles,
-    saveProfile,
-    findProfileById
-}

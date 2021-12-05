@@ -9,7 +9,7 @@ const selectProfile = (state) => state.profile;
 const ProfileScreen = () => {
     const profile = useSelector(selectProfile);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllProfiles(dispatch), []);
+    useEffect(() => fetchAllProfiles(dispatch));
     // console.log(profile);
     // let editProfile = false;
     const editProfileClickHandler = () => {

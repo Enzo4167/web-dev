@@ -52,10 +52,3 @@ export const likeTweet = (dispatch, tweet) => {
         )
 }
 
-
-export default {
-    fetchAllTweets,
-    postNewTweet,
-    deleteTweet,
-    likeTweet
-}
